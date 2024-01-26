@@ -1,0 +1,16 @@
+.jbl_img {
+  /* ff 3.6+ */
+  background: -moz-radial-gradient(circle at 62% 45%, rgba(117, 113, 113, 1) 0%, rgba(16, 16, 16, 1) 53%);
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-radial-gradient(circle at 62% 45%, rgba(117, 113, 113, 1) 0%, rgba(16, 16, 16, 1) 53%);
+
+  /* opera 11.10+ */
+  background: -o-radial-gradient(circle at 62% 45%, rgba(117, 113, 113, 1) 0%, rgba(16, 16, 16, 1) 53%);
+
+  /* ie 10+ */
+  background: -ms-radial-gradient(circle at 62% 45%, rgba(117, 113, 113, 1) 0%, rgba(16, 16, 16, 1) 53%);
+
+  /* global 92%+ browsers support */
+  background: radial-gradient(circle at 62% 45%, rgba(117, 113, 113, 1) 0%, rgba(16, 16, 16, 1) 53%);
+}
