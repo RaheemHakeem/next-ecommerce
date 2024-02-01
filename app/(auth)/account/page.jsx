@@ -1,6 +1,17 @@
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 import { styles } from "../../styles";
+import LogoutButton from "@/app/components/LogoutButton";
 
-const Account = () => {
+const Account = async () => {
+  const supabase = createServerComponentClient({ cookies });
+  const { data } = await supabase.auth.getSession();
+
+  if (!data.session) {
+    redirect("/login");
+  }
+
   return (
     <div className={`${styles.marginX} mt-20 mb-[180px]`}>
       <div className="mb-[80px] flex justify-between">
@@ -12,7 +23,8 @@ const Account = () => {
 
         <div className="text-sm">
           <p className=" font-medium">
-            Welcome! <span className="text-[#db4444]">Sin0fpride</span>
+            Welcome!{" "}
+            <span className="text-[#db4444]">{data.session.user.email}</span>
           </p>
         </div>
       </div>
@@ -103,9 +115,12 @@ const Account = () => {
 
             <div className="flex justify-end">
               <button>Cancel</button>
-              <button className="w-[215px] h-[56px] bg-[#db4444] rounded text-white text-base ml-8">Save Changes</button>
+              <button className="w-[215px] h-[56px] bg-[#db4444] rounded text-white text-base ml-8">
+                Save Changes
+              </button>
             </div>
           </form>
+          <LogoutButton />
         </div>
       </div>
     </div>

@@ -13,10 +13,10 @@ const Navbar = () => {
         <h2 className=" text-2xl font-bold">Exclusive</h2>
 
         <ul className="flex space-x-12 text-base font-normal">
-          <Link href={'/'}>Home</Link>
-          <Link href={'contact'}>Contact</Link>
-          <Link href={'about'}>About</Link>
-          <Link href={'signup'}>Sign Up</Link>
+          <Link href={"/"}>Home</Link>
+          <Link href={"/contact"}>Contact</Link>
+          <Link href={"/about"}>About</Link>
+          <Link href={"/signup"}>Sign Up</Link>
         </ul>
 
         <div className="flex space-x-7 justify-center items-center">
@@ -31,11 +31,13 @@ const Navbar = () => {
             </button>
           </form>
           <button>
-            <CiHeart className=" text-2xl"/>
+            <CiHeart className=" text-2xl" />
           </button>
-          <button>
-            <BsCart3 className=" text-2xl"/>
-          </button>
+          <Link href={"/cart"}>
+            <button>
+              <BsCart3 className=" text-2xl" />
+            </button>
+          </Link>
         </div>
       </nav>
       <hr />

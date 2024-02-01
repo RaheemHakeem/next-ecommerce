@@ -51,7 +51,7 @@ const TopHeader = () => {
       <div className=" text-[#d9d9d9]">
         Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!{" "}
         <span className="ml-2 text-white underline font-semibold">
-          <Link href={''}>ShopNow</Link>
+          <Link href={""}>ShopNow</Link>
         </span>
       </div>
       <div className="flex justify-center items-center">
@@ -60,7 +60,7 @@ const TopHeader = () => {
           <div
             className={`${
               isLanguageBarOpen ? "flex" : "hidden"
-            } flex-col absolute bg-black -ml-1 pt-2 pl-1 pr-6 pb-2`}
+            } flex-col absolute bg-black -ml-1 pt-2 pl-1 pr-6 pb-2 rounded`}
           >
             {langList.map((item) => {
               return (
